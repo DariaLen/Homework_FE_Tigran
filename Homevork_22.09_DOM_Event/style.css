@@ -1,0 +1,111 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+.input_form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    gap: 10px;
+    border: 1px solid lightblue;
+    padding: 20px;
+}
+.nameInput,
+.salaryInput{
+    border: 1px solid lightblue;
+    padding: 10px;
+    background-color: field;
+
+}
+
+input:focus {
+    outline: none;
+   border-color: lightblue;
+    background-color: lightblue;
+    color: rgb(116, 114, 114);
+  }
+.addCard{
+    border-radius: 30px;
+    border:2px solid lightblue ;
+    padding: 10px;
+    font-size: 18px;
+    color: rgb(22, 150, 192);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.addCard:hover{
+    transform: scale(1.1); 
+}
+
+.cards_container{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+}
+@media (max-width: 1100px) {
+    .cards_container{
+    display: flex;
+    flex-direction:column;
+    gap: 50px;
+}
+}
+.cards_container > div > img {
+    width: 350px;
+    height:350px;
+    object-fit: contain;
+}
+.cardsElem{
+    border: 1px solid ightblue;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    padding: 10px;
+    box-shadow:  5px 5px 8px lightblue;
+    transition: transform 0.5s, box-shadow 0.5s;
+    /* transition: all 0.3s ease; */
+   
+}
+.cardsElem:hover{
+    transform: scale(1.1); 
+}
+.del_btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid rgb(91, 163, 187);
+    border-radius: 50%;
+    color:  rgb(77, 146, 168);
+    cursor: pointer;
+    transition:font-size 0.3s ;
+}
+.del_btn:hover {
+    font-size: 20px;
+    width:30px ;
+    height: 30px;
+    border: 1px solid rgb(218, 54, 54);
+    color:  rgb(218, 54, 54);
+}
+.dateContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    align-self: center;
+    margin-bottom: 0;
+}
+.dateContainer > p:not(:first-child) {
+    margin-top: -15px;
+}
