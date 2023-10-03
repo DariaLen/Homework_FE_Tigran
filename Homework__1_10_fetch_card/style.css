@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+
+.active {
+	color: orange;
+} 
+.fa-start{
+    color:black
+}
+
+.users_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    margin: 40px;
+}
+img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+.cardElem{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow:  5px 5px 8px rgb(97, 159, 180);
+    transition: transform 0.5s, box-shadow 0.5s;
+    align-items: center;
+    gap: 10px;
+
+    background-color: white;
+}
