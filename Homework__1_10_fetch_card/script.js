@@ -5,28 +5,9 @@ fetch("https://dummyjson.com/products")
 
 const users_container = document.querySelector(".users_container");
 
-
-
-// function rating(n) {
-//   const roundedN = Math.round(n);
-//   const stars = document.createElement ("div");
-//   stars.className = "stars"
-  
-//   for (let i = 0; i <= 5; i++) {
-//     if (i < roundedN) {
-//       const star = document.createElement ("i") ;
-//       star.className = i < roundedN ? "fa fa-star active" : "fa fa-star"
-//       stars.appendChild(star);
-//   }
-// }
-//   return stars;
-// }
-
-
 function rating(n) {
   const roundedN = Math.round(n);
   const stars = document.createElement("div");
-  // stars.className = "stars";
   
   for (let i = 1; i <= 5; i++) {
     const star = document.createElement("li");
@@ -53,8 +34,7 @@ const renderCards = (array) => {
     cardElem.classList.add("cardElem");
 
     const image = document.createElement("img");
-    // image.src =
-    //   "https://th.bing.com/th/id/R.2a71221965ce9748f615ae0890f072de?rik=xTc3oPrOQuz3bQ&pid=ImgRaw&r=0";
+ 
     image.src = elem.images[0]
     image.alt = elem.title;
 
