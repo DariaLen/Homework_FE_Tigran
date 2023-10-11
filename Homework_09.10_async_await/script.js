@@ -16,9 +16,9 @@ async function getTodos(username){
     
   
     // let result = dataTodos.filter(elem => elem.userId === user.id)
-    // console.log(dataTodos);
+    console.log(dataTodos);
 }
-getTodos('Bret')
+// getTodos('Bret')
 
 // 2.Напишите функцию getСomments(title), которая в качестве аргумента принимает заголовок
 //  поста (/posts) и выводит список всех его комментариев (/comments).
@@ -42,39 +42,73 @@ async function getСomments(title){
         
         // Проверяем, есть ли комментарии у заданного поста 
         if (postComments.length > 0) {
-            console.log(postComments.map(elem => elem.body)); 
-            //  console.log(postComments[0].body); 
+            // console.log(postComments.map(elem => elem.body)); 
+             console.log(postComments[0].body); 
             } else { 
                 console.log("No comments for this post"); 
             } 
         }
             } 
           
-      getСomments('ratione ex tenetur perferendis')
+    //   getСomments('ratione ex tenetur perferendis')
 
-
+//https://jsonplaceholder.typicode.com
 // Напишите функцию getPhotoByNickName(username), которая в качестве аргумента принимает
 //  никнейм пользователя (/users) и выводит все его фотографии (/photos). В качестве ответа выведите
-//   в консоль массив со всеми фотографиями указанного пользователя.
+//   в консоль массив со всеми фотографиями указанного пользователя.//albumId//albums
+// async function getPhotoByNickName(username) {
+//     let urlUsers = `https://jsonplaceholder.typicode.com/users?username=${username}`;
+//     let resUsers = await fetch(urlUsers);
+//     let dataUsers = await resUsers.json();
+
+//     console.log(dataUsers)
+//   if (dataUsers.length === 0) {
+//     console.log("Пользователь не найден");
+//     return;
+//   }
+//     const photos = dataUsers.find((data) => data.username === username);
+ 
+//     if(photos){
+//     // let urlTodos = `https://jsonplaceholder.typicode.com/photos?userId=${dataUsers[0].userId}`  
+//     let urlTodos = `https://jsonplaceholder.typicode.com/albums?userId=${dataUsers[0].userId}`  
+//     let resPhohtos = await fetch(urlTodos)
+//     let dataTodos = await resPhohtos.json()
+    
+//     const postImages = dataTodos.filter((comment) => comment.postId === photos.id);
+//     console.log(postImages);
+//      }
+//  }
+// getPhotoByNickName("Antonette")
+
+
+
 async function getPhotoByNickName(username) {
     let urlUsers = `https://jsonplaceholder.typicode.com/users?username=${username}`;
     let resUsers = await fetch(urlUsers);
     let dataUsers = await resUsers.json();
 
-    
+    console.log(dataUsers)
   if (dataUsers.length === 0) {
     console.log("Пользователь не найден");
     return;
   }
     const photos = dataUsers.find((data) => data.username === username);
-   
+ 
     if(photos){
-    let urlTodos = `https://jsonplaceholder.typicode.com/photos?userId=${dataUsers[0].id}`    
-    let resPhohtos = await fetch(urlTodos)
-    let dataTodos = await resPhohtos.json()
+    let urlTodos = `https://jsonplaceholder.typicode.com/photos?userId=${photos.id}` 
+    // let urlTodos = `https://jsonplaceholder.typicode.com/photos?userId=${dataUsers[0].userId}`  
+    // let urlTodos = `https://jsonplaceholder.typicode.com/albums?userId=${dataUsers[0].userId}`  
+    let resPhohtos = await fetch(urlTodos);
+    let dataTodos = await resPhohtos.json();
     
-    const postImages = dataTodos.filter((comment) => comment.postId === photos.id);
+    const postImages = dataTodos.filter((comment) => comment.albumId === photos.id);
+    // const postImages = dataTodos.filter((comment) => comment.userId === photos.id);
     console.log(postImages);
-    }
-}
-getPhotoByNickName("Antonette")
+    console.log(postImages.length);
+     }
+ }
+
+ getPhotoByNickName("Antonette")
+
+
+
