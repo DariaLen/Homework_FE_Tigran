@@ -533,8 +533,6 @@ for(let i = 0; i < feedback_clients.length; i++){
   }
 }
 
-
-
 //burger menu
 const burgerMenu = document.querySelector('.burger_menu')
 const navMenu = document.querySelector('.nav-menu ul')
