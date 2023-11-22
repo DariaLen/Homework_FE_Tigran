@@ -18,7 +18,7 @@ class Delivery {
     }
 
     get validPhone(){
-    //  return this.phone.includes('+') ? true : false;
+  
     return this.phone.slice(0,1) == '+'  && this.phone.length == 14 ? true : false;
     }
 }
@@ -97,8 +97,8 @@ console.log(printEditionItem)
 
 
 class Magazine extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount, state, type){
-        super(name, releaseDate, pagesCount, state, type)
+    constructor(name, releaseDate, pagesCount, state){
+        super(name, releaseDate, pagesCount, state)
         this.type = 'magazin';
     }
 }
@@ -108,46 +108,48 @@ console.log(magazine)
 
 
 class Book extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount, state, type,author){
-        super(name, releaseDate, pagesCount, state, type)
+    constructor(name, releaseDate, pagesCount, state,author){
+        super(name, releaseDate, pagesCount, state)
         this.type = 'book';
         this.author = author;
     }
 }
-const book = new Book('newPiper', 2001, 124, 30, null, "Mikhelin")
+const book = new Book('newPiper', 2001, 124, 30, "Mikhelin")
 console.log(book)
 
 class NovelBook extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount, state, type,author){
-        super(name, releaseDate, pagesCount, state, type)
+    constructor(name, releaseDate, pagesCount, state,author){
+        super(name, releaseDate, pagesCount, state)
         this.type = 'novel';
         this.author = author;
     }
 }
 
 class FantasticBook extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount, state, type,author){
-        super(name, releaseDate, pagesCount, state, type)
+    constructor(name, releaseDate, pagesCount, state,author){
+        super(name, releaseDate, pagesCount, state)
         this.type = 'fantastic';
         this.author = author;
     }
 }
 
 class DetectiveBook extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount, state, type,author){
-        super(name, releaseDate, pagesCount, state, type)
+    constructor(name, releaseDate, pagesCount, state,author){
+        super(name, releaseDate, pagesCount, state)
         this.type = 'detectiv';
         this.author = author;
     }
 }
+const detective = new DetectiveBook('NEWBOOK',2022,230,30,'new Autor')
+console.log(detective)
 
-function digits(n) {
-    // TODO
-    let count = 1
-    const test = [n, count]
-   for(let i = 0; i <= n; i++){
-     count ++
-   }
-  return test;
-  }
-  console.log(digits(12))
+// function digits(n) {
+//     // TODO
+//     let count = 1
+//     const test = [n, count]
+//    for(let i = 0; i <= n; i++){
+//      count ++
+//    }
+//   return test;
+//   }
+//   console.log(digits(12))

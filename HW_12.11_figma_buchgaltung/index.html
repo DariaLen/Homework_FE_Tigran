@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Бухгалтерские услуги</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body id="home">
+    <header class="header wrapper">
+      <img class="logo-img" src="./images/Logo.png" alt="logo" />
+
+      <nav class="nav-menu">
+        <ul class="nav-menu__li">
+          <li><a href="#home">главная</a></li>
+          <li><a href="#services">услуги</a></li>
+          <li><a href="#cases">кейсы</a></li>
+          <li><a href="#cases">о компании</a></li>
+          <li><a href="#contacts">контакты</a></li>
+        </ul>
+      </nav>
+      <div class="burger_menu"><img src="./images/burger_menu.png" alt="burger_menu"></div>
+    </header>
+
+    <body>
+      <section>
+        <div class="background">
+          <div class="content wrapper">
+            <div class="cards_container slider wrapper">
+              <div class="slider-line"></div>
+            </div>
+            <div class="switcher">
+              <div class="slider_btns"></div>
+              <div class="arrows">
+                <button class="slider-left">&lt;</button>
+                <button class="slider-right">&gt;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="services_section">
+        <div class="services wrapper">
+          <p>Наши услуги</p>
+          <h2>Мы специализируемся</h2>
+          <div class="services__img"></div>
+        </div>
+      </section>
+
+      <section id="cases" class="section-obout">
+        <div class="wrapper section-obout__us">
+          <div class="section-obout__div">
+            <h3>О нас</h3>
+            <div class="section-obout__h2">
+              <h2>Компания</h2>
+              <h2>ИвановПром</h2>
+            </div>
+            <p class="section-obout__text">
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
+              на латинице с начала XVI века. В то время некий безымянный
+              печатник создал большую коллекцию размеров и форм шрифтов,
+              используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не
+              только успешно пережил без заметных изменений пять веков, но и
+              перешагнул в электронный дизайн.
+            </p>
+          </div>
+          <div class="our-cases">
+            <div>
+              <p>90</p>
+              <p>Завершено крупных сделок</p>
+              <a href="#">Все кейсы</a>
+            </div>
+            <div>
+              <p>90</p>
+              <p>Завершено крупных сделок</p>
+              <a href="#">Все кейсы</a>
+            </div>
+            <div>
+              <p>90</p>
+              <p>Завершено крупных сделок</p>
+              <a href="#">Все кейсы</a>
+            </div>
+            <div>
+              <p>90</p>
+              <p>Завершено крупных сделок</p>
+              <a href="#">Все кейсы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-clients">
+        <div class="wrapper our-clients__wrap">
+          <div class="our-clients__headings">
+            <p>Наши клиенты</p>
+            <h2>С нами работают</h2>
+          </div>
+          <!-- <div class="our-clients__slide"></div> -->
+          <div class="frame frame-clients"></div>
+          <div class='buttons_wrapper'>
+            <div class="clients_slider_btns"></div>
+            <div class="client_arrows">
+              <button class="btn-left">&lt;</button>
+              <button class="btn-right">&gt;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-section">
+        <div class="reviews-section__wrapper wrapper">
+          <div class="our-clients__headings">
+            <p>Отзывы</p>
+            <h2>Ваши благодарности</h2>
+          </div>
+          <div class="frame feedback"></div>
+          <div class='feedback__btn-wrap buttons_wrapper'>
+            <div class=" clients_slider_btns round_feedback "></div>
+            <div class="feedback__arrows client_arrows">
+              <button class="feedback__btn-left btn-left">&lt;</button>
+              <button class="feedback__btn-right btn-right">&gt;</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <footer id="contacts" class="footer">
+        <div class="wrapper footer-wrapper">
+          <div class="footer-left">
+            <h2>Связь с нами</h2>
+            <p>
+              У вас остались вопросы? Напишите нам - мы ответим в ближайшее
+              время!
+            </p>
+            <div class="contact-info">
+              <div class="phone-icon">+7 (111) 222-33-44</div>
+              <div class="email-icon">
+                <a href="mailto:john.doe@example.com">order@bu-one.ru</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-right">
+            <form>
+              <div class="name-fields">
+                <div class="name-fields__wrapper">
+                  <label for="firstName">Имя</label>
+                  <input type="text" id="firstName" placeholder="Иван" />
+                </div>
+                <div class="name-fields__wrapper">
+                  <label for="lastName">Фамилия</label>
+                  <input type="text" id="lastName" placeholder="Иванов" />
+                </div>
+              </div>
+              <div class="message-field">
+                <label for="message">Сообщение</label>
+                <textarea id="message" placeholder="Ваше сообщение"></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="wrapper footer__wrapper">
+          <button class="footer__button">Отправить сообщение</button>
+        </div>
+      </footer>
+
+
+
+
+    </body>
+    <script src="./script.js"></script>
+  </body>
+</html>
